@@ -7,8 +7,6 @@ assignees: ''
 
 ---
 
-**Feature Title**
-개발 사항 타이틀 작성
-
 **Feature Desc**
-상세 개발 사항 작성
+- (ex1) 기본 패키지 설치
+- (ex2) 환경 변수 추가
