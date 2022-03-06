@@ -16,8 +16,6 @@ RUN mkdir ./build
 
 COPY --from=frontend ./build ./build
 
-RUN rm /etc/nginx/conf.d/default.conf
-
 COPY ./deploy/nginx.conf /etc/nginx/conf.d
 
 EXPOSE 80
