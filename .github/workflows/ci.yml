@@ -33,7 +33,7 @@ jobs:
       - name: Image Build
         run: |
           docker build \
-            -t registry.digitalocean.com/adungbadung/ab-prototype:latest \
+            -t registry.digitalocean.com/adungbadung/ab-prototype:${GITHUB_SHA::8} \
             -f Dockerfile .
 
       - name: Image Push
