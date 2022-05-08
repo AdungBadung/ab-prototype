@@ -1,28 +1,23 @@
-import React from 'react';
+import { StrictMode } from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter } from 'react-router-dom';
-import './index.css';
-import App from './layouts/App';
-import reportWebVitals from './reportWebVitals';
-
-import { Provider } from 'react-redux';
-import { createStore } from 'redux';
-import rootReducer from './modules/index';
 import { QueryClient, QueryClientProvider } from 'react-query';
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
+import reportWebVitals from './reportWebVitals';
+import App from './pages/App';
+import rootReducer from './modules/index';
 
 const store = createStore(rootReducer);
 const queryClient = new QueryClient();
 
 ReactDOM.render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <QueryClientProvider client={queryClient}>
-        <Provider store={store}>
-          <App />
-        </Provider>
-      </QueryClientProvider>
-    </BrowserRouter>
-  </React.StrictMode>,
+  <StrictMode>
+    <QueryClientProvider client={queryClient}>
+      <Provider store={store}>
+        <App />
+      </Provider>
+    </QueryClientProvider>
+  </StrictMode>,
   document.getElementById('root')
 );
 

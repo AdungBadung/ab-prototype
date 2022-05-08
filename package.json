@@ -2,6 +2,7 @@
   "name": "ab-prototype",
   "version": "0.1.0",
   "private": true,
+  "homepage": "/search",
   "dependencies": {
     "@craco/craco": "^6.4.3",
     "@emotion/babel-preset-css-prop": "^11.2.0",
@@ -44,12 +45,15 @@
     ]
   },
   "devDependencies": {
+    "@babel/preset-react": "^7.16.7",
     "@types/react-router-dom": "^5.3.3",
     "@typescript-eslint/eslint-plugin": "^5.12.1",
     "@typescript-eslint/parser": "^5.12.1",
+    "craco-alias": "^3.0.1",
     "cross-env": "^7.0.3",
     "eslint-config-prettier": "^8.4.0",
     "eslint-plugin-react": "^7.29.2",
+    "eslint-plugin-unused-imports": "^2.0.0",
     "prettier": "^2.5.1"
   }
 }
