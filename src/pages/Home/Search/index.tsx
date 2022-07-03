@@ -1,12 +1,14 @@
-import { useAppSelector } from '@store/hooks';
+import { useAppSelector, useAppDispatch } from '@store/hooks';
 import { Button } from '@mui/material';
+import { actions } from '@store/app/slice';
 
 const Search = () => {
   const data = useAppSelector((state) => {
     return state.app.dummy;
   });
+  const dispatch = useAppDispatch();
   const handleToggle = () => {
-    console.info(data);
+    dispatch(actions.changeDummy(!data));
   };
   return (
     <>
