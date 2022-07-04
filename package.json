@@ -2,7 +2,7 @@
   "name": "ab-prototype",
   "version": "0.1.0",
   "private": true,
-  "homepage": "/search",
+  "homepage": "/",
   "dependencies": {
     "@craco/craco": "^6.4.3",
     "@emotion/babel-preset-css-prop": "^11.2.0",
@@ -30,7 +30,7 @@
   },
   "scripts": {
     "start": "cross-env craco start",
-    "build": "cross-env craco build",
+    "build": "cross-env GENERATE_SOURCEMAP=true craco build",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx ./src"
   },
   "browserslist": {
